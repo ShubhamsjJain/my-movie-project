@@ -4,8 +4,9 @@
       <mat-step [stepControl]="ticketsForm.get('auditoriumName')!">
         <ng-template matStepLabel>Select the Cinema Hall</ng-template>
         <mat-form-field class="d-block w-100 mt-2">
-          <mat-label>Cinema Hall Name</mat-label>
-          <mat-select class="text-dark" formControlName="auditoriumName">
+          <!-- <mat-label>Cinema Hall Name</mat-label> -->
+          <mat-select class="text-dark" formControlName="auditoriumName" aria-placeholder="Cinema Hall Name">
+            
             <mat-option
               *ngFor="let hall of allAuditoriums$ | async"
               [value]="hall.name"
@@ -26,7 +27,7 @@
         label="Select the Show Timing"
       >
         <mat-form-field class="d-block w-100 mt-2">
-          <mat-label class="text-dark">Show Timing</mat-label>
+          <!-- <mat-label class="text-dark">Show Timing</mat-label> -->
           <mat-select class="text-dark" formControlName="showName">
             <mat-option
               *ngFor="let show of allShows$ | async"
@@ -49,7 +50,7 @@
         label="Select the Date"
       >
         <mat-form-field class="d-block w-100 mt-2">
-          <mat-label class="text-dark">Choose a date</mat-label>
+          <!-- <mat-label class="text-dark">Choose a date</mat-label> -->
           <input
             class="text-dark"
             formControlName="date"

@@ -16,6 +16,13 @@
   position: relative;
 }
 
+.form-fields{
+
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
 .form-field .delete-icon {
   position: absolute;
   height: inherit;

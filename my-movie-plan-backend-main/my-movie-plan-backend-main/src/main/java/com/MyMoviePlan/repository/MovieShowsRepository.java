@@ -23,6 +23,7 @@ public interface MovieShowsRepository extends JpaRepository<MovieShowsEntity, In
 	@Query(value = "SELECT DISTINCT ms.* "
 			+ "FROM movie_shows ms "
 			+ "WHERE ms.show_start > CURRENT_DATE ", nativeQuery = true)
+	
     //@Query(value = "SELECT DISTINCT ON(ms.movie_id) * FROM movie_shows ms WHERE ms.show_start > CURRENT_DATE", nativeQuery = true)
     List<MovieShowsEntity> findAllUpComing();
 	

@@ -1,6 +1,6 @@
 export class GlobalConstants {
 
-    public static APP_NAME: string = 'NMS Cinemas';
+    public static APP_NAME: string = 'My-Movie-Plan';
 
     public static SHOW_NAMES: string[] = ['Morning Show', 'Matinee', 'First Show', 'Second Show'];
 

@@ -4,59 +4,68 @@
     (<span class="text-danger d-inline-block my-2">do not refresh the page</span
     >)
   </div>
+
   <div class="my-auto h-70vh row g-0 justify-content-around">
+
     <div class="col-6 px-2 mx-auto order-2">
+
       <form [formGroup]="paymentForm" class="example-form p-4">
-        <mat-form-field appearance="outline" class="d-block w-100 text-dark">
-          <mat-label>Card Number</mat-label>
+
+        <mat-form-field appearance="outline" class="form-fields">
+          <!-- <mat-label>Card Number</mat-label> -->
           <input
             matInput
             formControlName="cardNumber"
             type="tel"
+            placeholder="Card Number"
             #ccNumber
             class="fs-3 bolder col-12"
             (keyup)="creditCardNumberSpacing()"
           />
-          <mat-hint>16 digit card number</mat-hint>
+          <mat-hint class="form-fields">16 digit card number</mat-hint>
           <mat-error *ngIf="cardNumberErrors">{{ cardNumberErrors }}</mat-error>
         </mat-form-field>
+
 
         <div class="row g-0 justify-content-around">
           <mat-form-field
             appearance="outline"
-            class="d-block text-dark col-sm-12 col-lg-4 px-1"
+            class="form-fields-half"
           >
-            <mat-label>Month</mat-label>
-            <mat-select formControlName="cardExpiryMonth">
+            <!-- <mat-label>Month</mat-label> -->
+            <mat-select formControlName="cardExpiryMonth" placeholder="Month">
               <mat-option *ngFor="let month of tempMonths" [value]="month">
                 {{ month }}
               </mat-option>
             </mat-select>
-            <mat-hint>Select card expiry month</mat-hint>
+            <mat-hint class="form-fields">Select card expiry month</mat-hint>
             <mat-error *ngIf="monthErrors">{{ monthErrors }}</mat-error>
           </mat-form-field>
+
           <mat-form-field
             appearance="outline"
-            class="d-block text-dark col-sm-12 col-lg-4 px-1"
+            class="form-fields-half"
           >
-            <mat-label>Year</mat-label>
-            <mat-select formControlName="cardExpiryYear">
+            <!-- <mat-label>Year</mat-label> -->
+            <mat-select formControlName="cardExpiryYear" placeholder="Year">
               <mat-option *ngFor="let year of tempYears" [value]="year">
                 {{ year }}
               </mat-option>
             </mat-select>
-            <mat-hint>select card expiry year</mat-hint>
+            <mat-hint class="form-fields">select card expiry year</mat-hint>
             <mat-error *ngIf="yearErrors">{{ yearErrors }}</mat-error>
           </mat-form-field>
+
           <mat-form-field
             appearance="outline"
-            class="d-block text-dark col-sm-12 col-lg-4 px-1"
+            class="form-fields"
           >
-            <mat-label>CVV</mat-label>
+            <!-- <mat-label>CVV</mat-label> -->
             <input
               matInput
               [type]="cvvHide ? 'password' : 'text'"
               formControlName="cardCVV"
+              placeholder="CVV"
             />
             <button
               mat-icon-button

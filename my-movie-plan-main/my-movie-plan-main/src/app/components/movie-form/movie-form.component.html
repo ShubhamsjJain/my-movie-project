@@ -16,10 +16,10 @@
           <div class="row g-0 my-3 justify-content-around">
             <div class="col-sm-12 col-lg-5 mx-lg-2">
               <mat-form-field
-                class="d-block w-100 text-dark"
+                class="form-fields"
                 appearance="outline"
               >
-                <mat-label>Name</mat-label>
+                <!-- <mat-label>Name</mat-label> -->
                 <input
                   matInput
                   placeholder="Movie Name"
@@ -31,10 +31,10 @@
 
             <div class="col-sm-12 col-lg-5 mx-lg-2">
               <mat-form-field
-                class="d-block w-100 text-dark"
+                class="form-fields"
                 appearance="outline"
               >
-                <mat-label>Release Date</mat-label>
+                <!-- <mat-label>Release Date</mat-label> -->
                 <input
                   matInput
                   [min]="todayDate"
@@ -53,10 +53,10 @@
 
             <div class="col-sm-12 col-lg-5 mx-lg-2">
               <mat-form-field
-                class="d-block w-100 text-dark"
+                class="form-fields"
                 appearance="outline"
               >
-                <mat-label>Image URL</mat-label>
+                <!-- <mat-label>Image URL</mat-label> -->
                 <input
                   matInput
                   placeholder="Image Link"
@@ -68,10 +68,10 @@
 
             <div class="col-sm-12 col-lg-5 mx-lg-2">
               <mat-form-field
-                class="d-block w-100 text-dark"
+                class="form-fields"
                 appearance="outline"
               >
-                <mat-label>Background Image URL</mat-label>
+                <!-- <mat-label>Background Image URL</mat-label> -->
                 <input
                   matInput
                   placeholder="Background Image Link"
@@ -83,13 +83,13 @@
 
             <div class="col-sm-12 col-lg-5 mx-lg-2">
               <mat-form-field
-                class="d-block w-100 text-dark"
+                class="form-fields"
                 appearance="outline"
               >
-                <mat-label>Duration</mat-label>
+                <!-- <mat-label>Duration</mat-label> -->
                 <input
                   matInput
-                  placeholder="2h 25m"
+                  placeholder="Duration"
                   formControlName="duration"
                 />
                 <mat-error *ngIf="durationErrors">{{
@@ -100,20 +100,20 @@
 
             <div class="col-sm-12 col-lg-5 mx-lg-2">
               <mat-form-field
-                class="d-block w-100 text-dark"
+                class="form-fields"
                 appearance="outline"
               >
-                <mat-label>Movie Caption</mat-label>
-                <input matInput formControlName="caption" />
+                <!-- <mat-label>Movie Caption</mat-label> -->
+                <input matInput formControlName="caption" placeholder="Movie Caption"/>
               </mat-form-field>
             </div>
 
             <div class="col-sm-12 col-lg-11">
               <mat-form-field
-                class="d-block w-100 text-dark"
+                class="form-fields"
                 appearance="outline"
               >
-                <mat-label>Story</mat-label>
+                <!-- <mat-label>Story</mat-label> -->
                 <textarea
                   matInput
                   formControlName="story"
@@ -143,7 +143,7 @@
               class="example-chip-list"
               class="d-block w-100 text-dark"
             >
-              <mat-label>Add Language</mat-label>
+              <!-- <mat-label>Add Language</mat-label> -->
               <mat-chip-list #languageList aria-label="language selection">
                 <mat-chip
                   *ngFor="let language of languages"
@@ -236,10 +236,10 @@
                 class="d-block w-100 text-dark"
                 appearance="outline"
               >
-                <mat-label>Genre</mat-label>
+                <!-- <mat-label>Genre</mat-label> -->
                 <input
                   matInput
-                  placeholder="Comedy"
+                  placeholder="Genre"
                   [formControlName]="i"
                   [attr.list]="'genres-' + i"
                 />
@@ -307,10 +307,10 @@
             >
               <div class="col-lg-3 col-sm-6">
                 <mat-form-field
-                  class="d-block w-100 text-dark"
+                  class="form-fields"
                   appearance="outline"
                 >
-                  <mat-label>Actor Name</mat-label>
+                  <!-- <mat-label>Actor Name</mat-label> -->
                   <input
                     matInput
                     placeholder="Actor Name"
@@ -326,11 +326,11 @@
 
               <div class="col-lg-3 col-sm-6">
                 <mat-form-field
-                  class="d-block w-100 text-dark"
+                  class="form-fields"
                   appearance="outline"
                 >
-                  <mat-label>Actor Role</mat-label>
-                  <input matInput placeholder="Hero" formControlName="role" />
+                  <!-- <mat-label>Actor Role</mat-label> -->
+                  <input matInput placeholder="Actor role" formControlName="role" />
                   <mat-error
                     *ngIf="cast.get('role')?.errors?.required && cast.touched"
                   >
@@ -341,10 +341,10 @@
 
               <div class="col-lg-3 col-sm-6">
                 <mat-form-field
-                  class="d-block w-100 text-dark"
+                  class="form-fields"
                   appearance="outline"
                 >
-                  <mat-label>Actor Image</mat-label>
+                  <!-- <mat-label>Actor Image</mat-label> -->
                   <input
                     matInput
                     placeholder="Actor image"
@@ -402,10 +402,10 @@
             >
               <div class="col-lg-3 col-sm-6">
                 <mat-form-field
-                  class="d-block w-100 text-dark"
+                  class="form-fields"
                   appearance="outline"
                 >
-                  <mat-label>Crew Name</mat-label>
+                  <!-- <mat-label>Crew Name</mat-label> -->
                   <input
                     matInput
                     placeholder="Crew Name"
@@ -421,13 +421,13 @@
 
               <div class="col-lg-3 col-sm-6">
                 <mat-form-field
-                  class="d-block w-100 text-dark"
+                  class="form-fields"
                   appearance="outline"
                 >
-                  <mat-label>Crew Role</mat-label>
+                  <!-- <mat-label>Crew Role</mat-label> -->
                   <input
                     matInput
-                    placeholder="Director"
+                    placeholder="Crew role"
                     formControlName="role"
                   />
                   <mat-error
@@ -440,10 +440,10 @@
 
               <div class="col-lg-3 col-sm-6">
                 <mat-form-field
-                  class="d-block w-100 text-dark"
+                  class="form-fields"
                   appearance="outline"
                 >
-                  <mat-label>Crew Image</mat-label>
+                  <!-- <mat-label>Crew Image</mat-label> -->
                   <input
                     matInput
                     placeholder="Crew image"

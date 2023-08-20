@@ -57,3 +57,16 @@
 ::ng-deep .mat-input-element::placeholder {
   color: #000;
 }
+
+.form-fields{
+
+  width: 100%;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.form-fields-half{
+  width: 50%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}

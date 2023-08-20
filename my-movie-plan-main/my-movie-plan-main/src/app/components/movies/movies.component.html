@@ -4,8 +4,8 @@
       <h2 class="fs-2 text-center text-dark text-uppercase">Show</h2>
       <br />
       <mat-form-field appearance="outline" class="d-block w-100">
-        <mat-label>Show</mat-label>
-        <mat-select name="showText" [(ngModel)]="showText">
+        <!-- <mat-label>Show</mat-label> -->
+        <mat-select name="showText" [(ngModel)]="showText" aria-placeholder="Show">
           <mat-option
             *ngFor="let type of types"
             [value]="type"

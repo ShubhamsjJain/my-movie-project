@@ -17,8 +17,8 @@
       <!-- Email Field -->
       <div class="col-12 mb-2 px-lg-1">
         <mat-form-field appearance="outline" class="d-block text-white">
-          <mat-label>Enter your Email</mat-label>
-          <input matInput type="email" formControlName="email" class="fs-5" />
+          <!-- <mat-label>Enter your Email</mat-label> -->
+          <input matInput type="email" formControlName="email" class="fs-5" placeholder="Enter your Email"/>
           <mat-hint *ngIf="email.pending" class="text-warning"
             >Checking For uniqueness...</mat-hint
           >
@@ -26,23 +26,24 @@
         </mat-form-field>
       </div>
 
-      <div class="col-sm-12 col-md-12 col-lg-6 mb-2 px-lg-1">
+      <div class="col-12 mb-2 px-lg-1">
         <mat-form-field appearance="outline" class="d-block text-white">
-          <mat-label>Enter your name</mat-label>
-          <input matInput type="text" formControlName="name" class="fs-5" />
+          <!-- <mat-label>Enter your name</mat-label> -->
+          <input matInput type="text" formControlName="name" class="fs-5" placeholder="Enter your name"/>
           <mat-error *ngIf="nameErrors">{{ nameErrors }}</mat-error>
         </mat-form-field>
       </div>
 
-      <div class="col-sm-12 col-md-12 col-lg-6 mb-2 px-lg-1">
+      <div class="col-12 mb-2 px-lg-1">
         <mat-form-field appearance="outline" class="d-block text-white">
-          <mat-label>Enter your Mobile</mat-label>
+          <!-- <mat-label>Enter your Mobile</mat-label> -->
           <span matPrefix>+91 &nbsp;</span>
           <input
             matInput
             type="text"
             formControlName="mobile"
             class="fs-5"
+            placeholder="Enter your Mobile"
           /><mat-hint *ngIf="mobile.pending" class="text-warning"
             >Checking For uniqueness...</mat-hint
           >
@@ -50,14 +51,15 @@
         </mat-form-field>
       </div>
 
-      <div class="col-sm-12 col-md-12 col-lg-6 mb-2 px-lg-1">
+      <div class="col-12 mb-2 px-lg-1">
         <mat-form-field appearance="outline" class="d-block text-white">
-          <mat-label>Enter your password</mat-label>
+          <!-- <mat-label>Enter your password</mat-label> -->
           <input
             matInput
             [type]="hidePassword ? 'password' : 'text'"
             formControlName="password"
             class="fs-5"
+            placeholder="Enter your password"
           />
           <mat-error *ngIf="passwordErrors">{{ passwordErrors }}</mat-error>
           <button
@@ -74,11 +76,11 @@
         </mat-form-field>
       </div>
 
-      <div class="col-sm-12 col-md-12 col-lg-6 mb-2 px-lg-1">
+      <div class="col-12 mb-2 px-lg-1">
         <mat-form-field appearance="outline" class="d-block text-white">
-          <mat-label>Select Gender</mat-label>
-          <mat-select formControlName="gender" class="text-white fs-5">
-            <mat-option *ngFor="let sex of genders" [value]="sex.name">
+          <!-- <mat-label>Select Gender</mat-label> -->
+          <mat-select formControlName="gender" class="text-white fs-5" aria-placeholder="Select Gender">
+            <mat-option *ngFor="let sex of genders" [value]="sex.name" class="text-white">
               {{ sex.name }}
             </mat-option>
           </mat-select>
